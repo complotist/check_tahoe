@@ -6,7 +6,7 @@
 	apply Service "tahoe-" for (tahoe => config in host.vars.tahoe) {
 	  import "generic-service"
 	  check_command = "tahoe"
-		display_name = "tahoe status for " + tahoe
+	  display_name = "tahoe status for " + tahoe
 	  check_interval = 180s
 	  enable_notifications = false
 	  command_endpoint = host.vars.client_endpoint
